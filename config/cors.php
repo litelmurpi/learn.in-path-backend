@@ -8,12 +8,13 @@ return [
     'allowed_origins' => [
         'http://localhost:5173',
         'http://localhost:3000',
-        'https://learn-in-path-frontend.vercel.app', // Add your Vercel URL
-        // Jika ada custom domain:
-        // 'https://yourdomain.com',
+        'https://learn-in-path-frontend.vercel.app',
+        'https://*.vercel.app', // untuk preview deployments
     ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [
+        'https://*\.vercel\.app$', // pattern untuk semua subdomain vercel
+    ],
 
     'allowed_headers' => ['*'],
 
